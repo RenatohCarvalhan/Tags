@@ -1,0 +1,19 @@
+%h1 Articles
+%table
+  #tag_cloud
+    - tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class|
+      = link_to tag.name, tag_path(tag.name), class: css_class
+  - @articles.each do |article|
+    %tr
+      %td
+        %h1
+          = link_to article.nome
+    %tr
+      %td= article.content
+    %tr
+    %td
+      = raw article.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join (', ')
+    %tr
+    %td= link_to 'Edit', edit_article_path(article)
+%br/
+= link_to 'New Article', new_article_path
