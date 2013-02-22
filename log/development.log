@@ -11966,3 +11966,588 @@ Processing by ArticlesController#index as HTML
   [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3
   Rendered articles/index.html.haml within layouts/application (16.8ms)
 Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-22 10:11:09 -0300
+Connecting to database specified by database.yml
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4237909189141448318__call__245255411776744620__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-22 10:11:10 -0300
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4237909189141448318__call__245255411776744620__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-22 10:11:37 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.8ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.8ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.9ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3[0m
+  Rendered articles/index.html.haml within layouts/application (237.7ms)
+Completed 200 OK in 439ms (Views: 282.1ms | ActiveRecord: 58.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-22 10:11:38 -0300
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-22 10:11:38 -0300
+Served asset /formtastic.css - 200 OK (3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-22 10:11:38 -0300
+Served asset /articles.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-22 10:11:38 -0300
+Served asset /scaffolds.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-22 10:11:38 -0300
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-22 10:11:38 -0300
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-22 10:11:38 -0300
+Served asset /articles.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-22 10:11:38 -0300
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2013-02-22 10:11:41 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  Rendered articles/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2.json" for 127.0.0.1 at 2013-02-22 10:11:49 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+Completed 200 OK in 90ms (Views: 87.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-22 10:13:14 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (1.9ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (5.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3
+  Rendered articles/index.html.haml within layouts/application (26.6ms)
+Completed 200 OK in 37ms (Views: 26.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3[0m
+  Rendered articles/index.html.haml within layouts/application (53.1ms)
+Completed 200 OK in 77ms (Views: 55.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-22 10:20:52 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2013-02-22 10:20:57 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (6.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  Rendered articles/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-22 10:20:57 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-22 10:20:57 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-22 10:20:57 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-22 10:20:58 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-22 10:20:58 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-22 10:20:58 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-22 10:20:58 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-22 10:20:58 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-22 10:21:04 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  Rendered articles/show.json.rabl (70.3ms)
+Completed 500 Internal Server Error in 78ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<Rabl::Engine:0x007fecec5e4288>):
+    1: object @article
+    2: attributes :id, :nome, :published_at
+    3: 
+    4: if current_user.admin?
+  app/views/articles/show.json.rabl:1:in `_app_views_articles_show_json_rabl__4441174750479517814_70327751205660'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.3ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-22 10:21:39 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (1.0ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  Rendered articles/show.json.rabl (42.6ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<Rabl::Engine:0x007fece9711e60>):
+    1: object @articles
+    2: attributes :id, :nome, :published_at
+    3: 
+    4: if current_user.admin?
+  app/views/articles/show.json.rabl:1:in `_app_views_articles_show_json_rabl__4441174750479517814_70327774721840'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-22 10:21:40 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  Rendered articles/show.json.rabl (78.9ms)
+Completed 500 Internal Server Error in 86ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<Rabl::Engine:0x007fece9c71298>):
+    1: object @articles
+    2: attributes :id, :nome, :published_at
+    3: 
+    4: if current_user.admin?
+  app/views/articles/show.json.rabl:1:in `_app_views_articles_show_json_rabl__4441174750479517814_70327774721840'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.4ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-22 10:21:40 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  Rendered articles/show.json.rabl (26.7ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<Rabl::Engine:0x007fecec73baf0>):
+    1: object @articles
+    2: attributes :id, :nome, :published_at
+    3: 
+    4: if current_user.admin?
+  app/views/articles/show.json.rabl:1:in `_app_views_articles_show_json_rabl__4441174750479517814_70327774721840'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-22 10:21:45 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  Rendered articles/show.json.rabl (91.4ms)
+Completed 500 Internal Server Error in 96ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<Rabl::Engine:0x007fece9c64638>):
+    1: object @article
+    2: attributes :id, :nome, :published_at
+    3: 
+    4: if current_user.admin?
+  app/views/articles/show.json.rabl:1:in `_app_views_articles_show_json_rabl__4441174750479517814_70327754085700'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-22 10:23:12 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3
+  Rendered articles/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 39ms (Views: 33.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-22 10:23:13 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-22 10:23:13 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-22 10:23:13 -0300
+Served asset /formtastic.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-22 10:23:13 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-22 10:23:13 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-22 10:23:13 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-22 10:23:13 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-22 10:23:13 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/2/edit" for 127.0.0.1 at 2013-02-22 10:23:15 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendered articles/_form.html.haml (2.9ms)
+  Rendered articles/edit.html.haml within layouts/application (36.7ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: = semantic_form_for @article do |f|
+    2:   = f.inputs
+    3:   = f.input :tag_list, label: "Tags (separated by commas)"
+    4:   = f.button
+  app/views/articles/_form.html.haml:1:in `_app_views_articles__form_html_haml__2237789528161575864_70327755646140'
+  app/views/articles/edit.html.haml:2:in `_app_views_articles_edit_html_haml__830677566571326420_70327755744960'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.9ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2013-02-22 10:23:54 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendered articles/_form.html.haml (1.3ms)
+  Rendered articles/edit.html.haml within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: = semantic_form_for @article do |f|
+    2:   = f.inputs
+    3:   = f.input :tag_list, label: "Tags (separated by commas)"
+    4:   = f.button
+  app/views/articles/_form.html.haml:1:in `_app_views_articles__form_html_haml__2237789528161575864_70327755646140'
+  app/views/articles/edit.html.haml:2:in `_app_views_articles_edit_html_haml__830677566571326420_70327755744960'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-22 10:24:17 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3[0m
+  Rendered articles/index.html.haml within layouts/application (46.2ms)
+Completed 200 OK in 121ms (Views: 47.0ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-22 10:24:17 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-22 10:24:17 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-22 10:24:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-22 10:24:18 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-22 10:24:18 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-22 10:24:18 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-22 10:24:18 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-22 10:24:18 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.9ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  Rendered articles/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-22 10:24:21 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/2.json" for 127.0.0.1 at 2013-02-22 10:24:25 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  Rendered articles/show.json.rabl (47.9ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<Rabl::Engine:0x007fece9d03760>):
+    1: object @article
+    2: attributes :id, :nome, :published_at
+    3: 
+    4: if current_user.admin?
+  app/views/articles/show.json.rabl:1:in `_app_views_articles_show_json_rabl__4441174750479517814_70327754085700'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (48.1ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (62.6ms)
+
+
+Started GET "/articles/2.json" for 127.0.0.1 at 2013-02-22 10:25:57 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mArticle Load (0.7ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  Rendered articles/show.json.rabl (1.4ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/2.json" for 127.0.0.1 at 2013-02-22 10:28:15 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  Rendered articles/show.json.rabl (29.7ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (undefined local variable or method `current_user' for #<Rabl::Engine:0x007fece9abf198>):
+    1: object @article
+    2: attributes :id, :nome, :published_at
+    3: 
+    4: if current_user.admin?
+  app/views/articles/show.json.rabl:1:in `_app_views_articles_show_json_rabl__4441174750479517814_70327750914440'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.1ms)
