@@ -60,6 +60,8 @@ GEM
     multi_json (1.6.1)
     mysql2 (0.3.11)
     polyglot (0.3.3)
+    rabl (0.8.0)
+      activesupport (>= 2.3.14)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -118,6 +120,7 @@ DEPENDENCIES
   haml
   jquery-rails
   mysql2
+  rabl
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   therubyracer

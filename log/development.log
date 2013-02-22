@@ -10650,3 +10650,1319 @@ Served asset /articles.css - 304 Not Modified (0ms)
 
 Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-20 11:21:11 -0300
 Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 11:08:02 -0300
+Connecting to database specified by database.yml
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4521580279636144532__call__1542965625937530473__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 11:08:05 -0300
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4521580279636144532__call__1542965625937530473__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 11:08:17 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (277.3ms)
+Completed 200 OK in 540ms (Views: 354.4ms | ActiveRecord: 60.4ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:08:18 -0300
+Served asset /formtastic.css - 200 OK (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:08:18 -0300
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:08:18 -0300
+Served asset /articles.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:08:18 -0300
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:08:18 -0300
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:08:18 -0300
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:08:18 -0300
+Served asset /articles.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:08:18 -0300
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/1json" for 127.0.0.1 at 2013-02-21 11:09:35 -0300
+
+ActionController::RoutingError (No route matches [GET] "/1json"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/1json" for 127.0.0.1 at 2013-02-21 11:14:33 -0300
+
+ActionController::RoutingError (No route matches [GET] "/1json"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 11:16:00 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (1.4ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.9ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (17.4ms)
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 11:16:02 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (59.7ms)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 11:16:14 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (23.8ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:16:47 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (3.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 43ms (Views: 36.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 11:19:44 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.8ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 11:19:45 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:23:39 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.9ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:25:03 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 11:25:06 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  Rendered articles/index.html.haml within layouts/application (44.6ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (undefined method `show' for "<a href=\"/articles\">/articles</a>":ActiveSupport::SafeBuffer):
+    7:     %tr
+    8:       %td
+    9:         %h1
+    10:           = link_to.show article.nome
+    11:     %tr
+    12:       %td= article.content
+    13:     %tr
+  app/views/articles/index.html.haml:10:in `block in _app_views_articles_index_html_haml___1321082512100308898_70095991557420'
+  app/views/articles/index.html.haml:6:in `each'
+  app/views/articles/index.html.haml:6:in `_app_views_articles_index_html_haml___1321082512100308898_70095991557420'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (2.4ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (0.8ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (19.4ms)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:25:36 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/Batman" for 127.0.0.1 at 2013-02-21 11:25:38 -0300
+
+ActionController::RoutingError (No route matches [GET] "/Batman"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/Batman" for 127.0.0.1 at 2013-02-21 11:25:54 -0300
+
+ActionController::RoutingError (No route matches [GET] "/Batman"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (3.9ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (28.0ms)
+Completed 200 OK in 40ms (Views: 31.0ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:01 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 11:26:03 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (4.0ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.8ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (24.4ms)
+Completed 200 OK in 39ms (Views: 30.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:03 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:03 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:03 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:03 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:03 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:03 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:03 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:04 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  [1m[36mTag Load (0.9ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  Rendered articles/_form.html.haml (198.6ms)
+  Rendered articles/edit.html.haml within layouts/application (246.8ms)
+Completed 200 OK in 256ms (Views: 252.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:26:11 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 11:27:07 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+ERROR: compiling _app_views_articles_index_html_haml___1321082512100308898_70096000501740 RAISED /Users/renatocarvalhan/Blog/app/views/articles/index.html.haml:10: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...false(( article.nome, link_to 'show'
+...                               ^
+Function body:           def _app_views_articles_index_html_haml___1321082512100308898_70096000501740(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "articles/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<h1>Articles</h1>\n<table>\n  <div id='tag_cloud'>\n", 2, false);
+
+
+ tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class|
+_hamlout.push_text("    #{_hamlout.format_script_false_false_false_true_false_true_false(( link_to tag.name, tag_path(tag.name), class: css_class
+));}\n", 0, false);end;_hamlout.push_text("  </div>\n", -1, false); @articles.each do |article|
+_hamlout.push_text("  <tr>\n    <td>\n      <h1>\n        #{_hamlout.adjust_tabs(3); 
+
+
+_hamlout.format_script_false_false_false_true_false_true_false(( article.nome, link_to 'show'
+));}\n      </h1>\n    </td>\n  </tr>\n  <tr>\n    <td>#{_hamlout.adjust_tabs(-1); 
+_hamlout.format_script_false_true_false_true_false_true_false((article.content
+));}</td>\n  </tr>\n  <tr></tr>\n  <td>\n    #{
+
+_hamlout.format_script_false_false_false_true_false_true_false(( raw article.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join (', ')
+));}\n  </td>\n  <tr></tr>\n  <td>#{
+_hamlout.format_script_false_true_false_true_false_true_false((link_to 'Edit', edit_article_path(article)
+));}</td>\n", 0, false);end;_hamlout.push_text("</table>\n<br>\n#{_hamlout.adjust_tabs(-1); 
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to 'New Article', new_article_path
+));}\n", 0, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `module_eval'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/template.rb:297:in `compile'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/template.rb:232:in `compile!'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/template.rb:144:in `block in render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/notifications.rb:125:in `instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/template.rb:143:in `render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:414:in `_run__4033687214071145749__process_action__1001232566987177777__callbacks'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/notifications.rb:123:in `instrument'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activerecord-3.2.12/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/abstract_controller/base.rb:121:in `process'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_controller/metal.rb:246:in `block in action'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activerecord-3.2.12/lib/active_record/query_cache.rb:64:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `_run__4521580279636144532__call__1542965625937530473__callbacks'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/railties-3.2.12/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/railties-3.2.12/lib/rails/rack/logger.rb:16:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/activesupport-3.2.12/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/railties-3.2.12/lib/rails/engine.rb:479:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/railties-3.2.12/lib/rails/application.rb:223:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/railties-3.2.12/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered articles/index.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/Users/renatocarvalhan/Blog/app/views/articles/index.html.haml:10: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...false(( article.nome, link_to 'show'
+...                               ^):
+    7:     %tr
+    8:       %td
+    9:         %h1
+    10:           = article.nome, link_to 'show'
+    11:     %tr
+    12:       %td= article.content
+    13:     %tr
+  actionpack (3.2.12) lib/action_view/template.rb:297:in `module_eval'
+  actionpack (3.2.12) lib/action_view/template.rb:297:in `compile'
+  actionpack (3.2.12) lib/action_view/template.rb:244:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (3.2.12) lib/action_view/template.rb:232:in `compile!'
+  actionpack (3.2.12) lib/action_view/template.rb:144:in `block in render'
+  activesupport (3.2.12) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.12) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.12) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.12) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.12) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.12) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.12) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.12) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.12) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.12) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.12) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.12) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.12) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.12) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.12) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.12) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.12) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.12) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.12) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.12) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.12) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.12) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.12) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.12) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.12) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.12) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:414:in `_run__4033687214071145749__process_action__1001232566987177777__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.12) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.12) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.12) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.12) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.12) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.12) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.12) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.12) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4521580279636144532__call__1542965625937530473__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (18.2ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:19 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  Rendered articles/show.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:23 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 11:28:44 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.7ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (18.2ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:44 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:44 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:44 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:44 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:44 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:44 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:44 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  Rendered articles/show.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:28:46 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:28:51 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:31:46 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:31:48 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:31:48 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:31:49 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1." for 127.0.0.1 at 2013-02-21 11:32:19 -0300
+
+ActionController::RoutingError (No route matches [GET] "/articles/1."):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (1.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  Rendered articles/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 11:32:22 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:32:26 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.3ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:32:47 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (4.1ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:35:28 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:35:30 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:35:30 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:35:31 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 11:35:52 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 127ms (Views: 2.4ms | ActiveRecord: 52.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 16:24:25 -0300
+Connecting to database specified by database.yml
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.12) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__1189619444157232885__call__873453708829315394__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 16:24:57 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (220.5ms)
+Completed 200 OK in 441ms (Views: 305.4ms | ActiveRecord: 51.2ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-21 16:24:58 -0300
+Served asset /formtastic.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-21 16:24:58 -0300
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-21 16:24:59 -0300
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-21 16:24:59 -0300
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-21 16:24:59 -0300
+Served asset /articles.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-21 16:24:59 -0300
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-21 16:24:59 -0300
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-21 16:24:59 -0300
+Served asset /articles.js - 200 OK (2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 16:25:23 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (1.1ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/articles/1.json" for 127.0.0.1 at 2013-02-21 16:25:42 -0300
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-21 17:23:45 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.8ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2013-02-21 17:23:50 -0300
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.haml (203.5ms)
+  Rendered articles/new.html.haml within layouts/application (232.6ms)
+Completed 200 OK in 274ms (Views: 271.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2013-02-21 17:24:50 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vHLj2CjbsxqqpCbimBIytMS1S+nYEQysDQH18r5RP9Y=", "article"=>{"nome"=>"Sushi", "content"=>"Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado...", "tag_list"=>"Comic"}, "button"=>""}
+  [1m[35mTag Load (2.8ms)[0m  SELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Comic' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (20.4ms)[0m  INSERT INTO `articles` (`content`, `created_at`, `nome`, `updated_at`) VALUES ('Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado, Viado...', '2013-02-21 20:24:50', 'Sushi', '2013-02-21 20:24:50')
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `taggings` (`article_id`, `created_at`, `tag_id`, `updated_at`) VALUES (3, '2013-02-21 20:24:51', 2, '2013-02-21 20:24:51')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 112ms (ActiveRecord: 24.6ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2013-02-21 17:24:51 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 3 LIMIT 1[0m
+  Rendered articles/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 17:24:53 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (1.8ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3
+  Rendered articles/index.html.haml within layouts/application (30.7ms)
+Completed 200 OK in 40ms (Views: 34.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2013-02-21 17:25:22 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 3 LIMIT 1[0m
+  Rendered articles/show.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 17:25:24 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.6ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3
+  Rendered articles/index.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2013-02-21 17:26:30 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (10.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  Rendered articles/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 9.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2013-02-21 17:41:20 -0300
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mTag Load (1.1ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 3
+  Rendered articles/index.html.haml within layouts/application (16.8ms)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 3.2ms)
