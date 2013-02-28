@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20130228133747) do
     t.string   "locale"
     t.string   "nome"
     t.text     "content"
+    t.string   "tag_list"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

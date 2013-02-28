@@ -2,7 +2,8 @@ class CreateArticleTranslations < ActiveRecord::Migration
   def up
     Article.create_translation_table!({
       nome: :string,
-      content: :text
+      content: :text,
+      tag_list: :string
     }, {
       migrate_data: true
     })

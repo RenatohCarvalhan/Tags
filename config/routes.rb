@@ -1,11 +1,12 @@
 Blog::Application.routes.draw do
   get 'tags/:tag', to: 'articles#index', as: :tag
+  
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
-  resources :articles
-  root :to => 'articles#index'
-  match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
+    resources :articles
+    root to: 'articles#index'
+  end
+
   match '', to: redirect("/#{I18n.default_locale}")
-end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
