@@ -24,6 +24,7 @@ gem 'rabl'
 gem 'formtastic'
 gem 'jquery-rails'
 gem 'haml'
+gem 'globalize3'
 #gem 'acts-as-taggable-on'
 
 # To use ActiveModel has_secure_password

@@ -1,4 +1,5 @@
 class Article < ActiveRecord::Base
+  translates :nome, :content
   attr_accessible :content, :nome, :tag_list
   has_many :taggings
   has_many :tags, through: :taggings

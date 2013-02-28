@@ -18794,3 +18794,3092 @@ Served asset /articles.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-27 22:11:36 -0300
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:33:49 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  Rendered articles/index.html.haml within layouts/application (49.9ms)
+Completed 200 OK in 157ms (Views: 122.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:33:50 -0300
+Served asset /formtastic.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:33:50 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:33:50 -0300
+Served asset /articles.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:33:50 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:33:50 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:33:50 -0300
+Served asset /articles.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:33:50 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:33:50 -0300
+Served asset /application.js - 304 Not Modified (6ms)
+Connecting to database specified by database.yml
+  [1m[36m (48.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (129.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (2.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateArticles (20130219130112)
+  [1m[35m (70.2ms)[0m  CREATE TABLE `articles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `content` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130219130112')[0m
+Migrating to CreateTags (20130219182006)
+  [1m[35m (94.0ms)[0m  CREATE TABLE `tags` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130219182006')[0m
+Migrating to CreateTaggings (20130219182018)
+  [1m[35m (72.1ms)[0m  CREATE TABLE `taggings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tag_id` int(11), `article_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (78.8ms)[0m  [1mCREATE INDEX `index_taggings_on_tag_id` ON `taggings` (`tag_id`)[0m
+  [1m[35m (91.2ms)[0m  CREATE INDEX `index_taggings_on_article_id` ON `taggings` (`article_id`)
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130219182018')[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:34:27 -0300
+Connecting to database specified by database.yml
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  Rendered articles/index.html.haml within layouts/application (50.9ms)
+Completed 200 OK in 167ms (Views: 129.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:34:28 -0300
+Served asset /formtastic.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:34:28 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:34:28 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:34:28 -0300
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:34:28 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:34:28 -0300
+Served asset /jquery.js - 304 Not Modified (48ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:34:28 -0300
+Served asset /articles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:34:28 -0300
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/en/articles/new" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Processing by ArticlesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered articles/_form.html.haml (120.9ms)
+  Rendered articles/new.html.haml within layouts/application (130.0ms)
+Completed 200 OK in 153ms (Views: 145.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:34:29 -0300
+Served asset /application.js - 304 Not Modified (46ms)
+
+
+Started POST "/en/articles" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"Batman", "content"=>"Batman é um super-herói, personagem de histórias em quadrinhos publicadas pela editora norte-americana DC Comics, cuja primeira aparição alguns acreditam ter sido em desenhos de Frank Foster em 1932,[2] e publicado, em maio de 1939, na revista Detective Comics #27. Mais tarde, juntamente com a revista Superman (também da DC Comics) e Homem-Aranha (da Marvel Comics), Batman seria um dos mais conhecidos super-heróis do mundo. Batman foi co-criado pelo desenhista Bob Kane e o escritor Bill Finger.", "tag_list"=>"Supe Hero, comic"}, "button"=>"", "locale"=>"en"}
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Supe Hero' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO `tags` (`created_at`, `name`, `updated_at`) VALUES ('2013-02-28 13:35:10', 'Supe Hero', '2013-02-28 13:35:10')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `tags` (`created_at`, `name`, `updated_at`) VALUES ('2013-02-28 13:35:10', 'comic', '2013-02-28 13:35:10')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `articles` (`content`, `created_at`, `nome`, `updated_at`) VALUES ('Batman é um super-herói, personagem de histórias em quadrinhos publicadas pela editora norte-americana DC Comics, cuja primeira aparição alguns acreditam ter sido em desenhos de Frank Foster em 1932,[2] e publicado, em maio de 1939, na revista Detective Comics #27. Mais tarde, juntamente com a revista Superman (também da DC Comics) e Homem-Aranha (da Marvel Comics), Batman seria um dos mais conhecidos super-heróis do mundo. Batman foi co-criado pelo desenhista Bob Kane e o escritor Bill Finger.', '2013-02-28 13:35:10', 'Batman', '2013-02-28 13:35:10')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `taggings` (`article_id`, `created_at`, `tag_id`, `updated_at`) VALUES (1, '2013-02-28 13:35:10', 1, '2013-02-28 13:35:10')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `taggings` (`article_id`, `created_at`, `tag_id`, `updated_at`) VALUES (1, '2013-02-28 13:35:10', 2, '2013-02-28 13:35:10')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/en/articles/1
+Completed 302 Found in 93ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/en/articles/1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"1"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  Rendered articles/show.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:35:10 -0300
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (1.0ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  Rendered articles/index.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:35:13 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (3.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateArticles (20130219130112)
+Migrating to CreateTags (20130219182006)
+Migrating to CreateTaggings (20130219182018)
+Migrating to CreateArticleTranslations (20130228133747)
+  [1m[35m (76.9ms)[0m  CREATE TABLE `article_translations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `article_id` int(11), `locale` varchar(255), `nome` varchar(255), `content` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE (`articles`.`id` >= 0) ORDER BY `articles`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `article_translations` (`article_id`, `content`, `created_at`, `locale`, `nome`, `updated_at`) VALUES (1, 'Batman é um super-herói, personagem de histórias em quadrinhos publicadas pela editora norte-americana DC Comics, cuja primeira aparição alguns acreditam ter sido em desenhos de Frank Foster em 1932,[2] e publicado, em maio de 1939, na revista Detective Comics #27. Mais tarde, juntamente com a revista Superman (também da DC Comics) e Homem-Aranha (da Marvel Comics), Batman seria um dos mais conhecidos super-heróis do mundo. Batman foi co-criado pelo desenhista Bob Kane e o escritor Bill Finger.', '2013-02-28 13:38:32', 'en', 'Batman', '2013-02-28 13:38:32')[0m
+  [1m[35m (15.1ms)[0m  COMMIT
+  [1m[36m (38.5ms)[0m  [1mCREATE INDEX `index_article_translations_on_article_id` ON `article_translations` (`article_id`)[0m
+  [1m[35m (109.3ms)[0m  CREATE INDEX `index_article_translations_on_locale` ON `article_translations` (`locale`)
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130228133747')[0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:38:46 -0300
+
+ActionController::RoutingError (undefined method `translates' for #<Class:0x007fe8dab6ce78>):
+  app/models/article.rb:2:in `<class:Article>'
+  app/models/article.rb:1:in `<top (required)>'
+  app/controllers/articles_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:42:43 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:04 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:04 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.3ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:05 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:05 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:05 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:05 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.4ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:05 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:05 -0300
+
+NoMethodError (undefined method `key?' for nil:NilClass):
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:36:in `visible_action?'
+  actionpack (3.2.12) lib/action_controller/metal/hide_actions.rb:18:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/implicit_render.rb:14:in `method_for_action'
+  actionpack (3.2.12) lib/action_controller/metal/compatibility.rb:61:in `method_for_action'
+  actionpack (3.2.12) lib/abstract_controller/base.rb:115:in `process'
+  actionpack (3.2.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.12) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.12) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.12) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `_run__4037109239158454726__call__1480786478501923402__callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.12) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/renatocarvalhan/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/renatocarvalhan/.rvm/gems/ruby-1.9.3-p385/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:28 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.3ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (218.6ms)
+Completed 200 OK in 306ms (Views: 226.6ms | ActiveRecord: 64.7ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:29 -0300
+Served asset /formtastic.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:29 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:29 -0300
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:29 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:29 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:29 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:29 -0300
+Served asset /articles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:29 -0300
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (5.4ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (24.5ms)
+Completed 200 OK in 43ms (Views: 34.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:31 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (2.0ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (4.2ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 35ms (Views: 26.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:34 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:43:35 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (1.3ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (3.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (21.8ms)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:36 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:36 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:36 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:36 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:36 -0300
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:36 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:36 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:36 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:43:39 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (7.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (1.3ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 41ms (Views: 29.8ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:39 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:39 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:39 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:39 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:43:39 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:39 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:39 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:43:40 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (23.7ms)
+Completed 200 OK in 41ms (Views: 37.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:33 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles/1/edit" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"locale"=>"pt", "id"=>"1"}
+  [1m[36mArticle Load (6.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.6ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  Rendered articles/_form.html.haml (113.3ms)
+  Rendered articles/edit.html.haml within layouts/application (128.5ms)
+Completed 200 OK in 149ms (Views: 137.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:35 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started PUT "/pt/articles/1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"Homem Morcego", "content"=>"Batman é um super-herói, personagem de histórias em quadrinhos publicadas pela editora norte-americana DC Comics, cuja primeira aparição alguns acreditam ter sido em desenhos de Frank Foster em 1932,[2] e publicado, em maio de 1939, na revista Detective Comics #27. Mais tarde, juntamente com a revista Superman (também da DC Comics) e Homem-Aranha (da Marvel Comics), Batman seria um dos mais conhecidos super-heróis do mundo. Batman foi co-criado pelo desenhista Bob Kane e o escritor Bill Finger.", "tag_list"=>"Supe Hero, comic"}, "button"=>"", "locale"=>"pt", "id"=>"1"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle::Translation Load (0.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Supe Hero' LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35m (0.5ms)[0m  UPDATE `articles` SET `nome` = 'Homem Morcego', `content` = 'Batman é um super-herói, personagem de histórias em quadrinhos publicadas pela editora norte-americana DC Comics, cuja primeira aparição alguns acreditam ter sido em desenhos de Frank Foster em 1932,[2] e publicado, em maio de 1939, na revista Detective Comics #27. Mais tarde, juntamente com a revista Superman (também da DC Comics) e Homem-Aranha (da Marvel Comics), Batman seria um dos mais conhecidos super-heróis do mundo. Batman foi co-criado pelo desenhista Bob Kane e o escritor Bill Finger.', `updated_at` = '2013-02-28 13:44:39' WHERE `articles`.`id` = 1
+  [1m[36mArticle::Translation Load (0.6ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1 AND `article_translations`.`locale` = 'pt' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE `article_translations` SET `content` = 'Batman é um super-herói, personagem de histórias em quadrinhos publicadas pela editora norte-americana DC Comics, cuja primeira aparição alguns acreditam ter sido em desenhos de Frank Foster em 1932,[2] e publicado, em maio de 1939, na revista Detective Comics #27. Mais tarde, juntamente com a revista Superman (também da DC Comics) e Homem-Aranha (da Marvel Comics), Batman seria um dos mais conhecidos super-heróis do mundo. Batman foi co-criado pelo desenhista Bob Kane e o escritor Bill Finger.', `updated_at` = '2013-02-28 13:44:39' WHERE `article_translations`.`id` = 2
+  [1m[36mArticle::Translation Load (0.3ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.2ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 2 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/pt/articles/1
+Completed 302 Found in 80ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/pt/articles/1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"pt", "id"=>"1"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  Rendered articles/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:39 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (1.3ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  Rendered articles/index.html.haml within layouts/application (17.2ms)
+Completed 200 OK in 36ms (Views: 30.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:41 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:44:43 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (6.5ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  Rendered articles/index.html.haml within layouts/application (24.1ms)
+Completed 200 OK in 37ms (Views: 26.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:43 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:43 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:44 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:44 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:44:44 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:44 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:44 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:44:44 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles/1/edit" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"1"}
+  [1m[35mArticle Load (0.7ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/_form.html.haml (38.3ms)
+  Rendered articles/edit.html.haml within layouts/application (43.2ms)
+Completed 200 OK in 107ms (Views: 103.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:12 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/en/articles/1" for 127.0.0.1 at 2013-02-28 10:45:16 -0300
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"Batman", "content"=>"Batman is a superhero character for comic books published by U.S. publisher DC Comics, whose first appearance some believe to have been in drawings of Frank Foster in 1932, [2] and published in May 1939 in the journal Detective Comics # 27. Later, along with Superman (also from DC Comics) and Spider-Man (Marvel Comics), Batman would be one of the most popular superheroes in the world. Batman was co-created by artist Bob Kane and writer Bill Finger.", "tag_list"=>"Supe Hero, comic"}, "button"=>"", "locale"=>"en", "id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mArticle::Translation Load (0.8ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Supe Hero' LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36m (3.4ms)[0m  [1mUPDATE `articles` SET `nome` = 'Batman', `content` = 'Batman is a superhero character for comic books published by U.S. publisher DC Comics, whose first appearance some believe to have been in drawings of Frank Foster in 1932, [2] and published in May 1939 in the journal Detective Comics # 27. Later, along with Superman (also from DC Comics) and Spider-Man (Marvel Comics), Batman would be one of the most popular superheroes in the world. Batman was co-created by artist Bob Kane and writer Bill Finger.', `updated_at` = '2013-02-28 13:45:16' WHERE `articles`.`id` = 1[0m
+  [1m[35mArticle::Translation Load (0.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1 AND `article_translations`.`locale` = 'en' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `article_translations` SET `content` = 'Batman is a superhero character for comic books published by U.S. publisher DC Comics, whose first appearance some believe to have been in drawings of Frank Foster in 1932, [2] and published in May 1939 in the journal Detective Comics # 27. Later, along with Superman (also from DC Comics) and Spider-Man (Marvel Comics), Batman would be one of the most popular superheroes in the world. Batman was co-created by artist Bob Kane and writer Bill Finger.', `updated_at` = '2013-02-28 13:45:16' WHERE `article_translations`.`id` = 1[0m
+  [1m[35mArticle::Translation Load (0.3ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 1 LIMIT 1
+  [1m[36mArticle::Translation Load (0.2ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 2 LIMIT 1[0m
+  [1m[35m (23.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/en/articles/1
+Completed 302 Found in 50ms (ActiveRecord: 30.6ms)
+
+
+Started GET "/en/articles/1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"1"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  Rendered articles/show.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:17 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (3.0ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 33ms (Views: 26.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Served asset /formtastic.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Served asset /articles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:19 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (3.3ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (5.7ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (24.0ms)
+Completed 200 OK in 39ms (Views: 26.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:21 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:45:24 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (2.4ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (24.2ms)
+Completed 200 OK in 40ms (Views: 32.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:24 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:24 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:24 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:24 -0300
+Served asset /scaffolds.css - 304 Not Modified (60ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:24 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:24 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:24 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:25 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:45:26 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 43ms (Views: 28.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:26 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:26 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:26 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:26 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:26 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:26 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:26 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:28 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:45:28 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:29 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:29 -0300
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:29 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:29 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:29 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:29 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:29 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:29 -0300
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (5.2ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (4.7ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 42ms (Views: 29.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:31 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:45:33 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:33 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:33 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:33 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:33 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:33 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:33 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:34 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:45:42 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (2.2ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (23.0ms)
+Completed 200 OK in 90ms (Views: 85.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:43 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:43 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:43 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:43 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:43 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:43 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:43 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:43 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (5.8ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (6.7ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  Rendered articles/index.html.haml within layouts/application (21.7ms)
+Completed 200 OK in 39ms (Views: 23.5ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:45:45 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles/new" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Processing by ArticlesController#new as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered articles/_form.html.haml (27.3ms)
+  Rendered articles/new.html.haml within layouts/application (30.8ms)
+Completed 200 OK in 49ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:46:31 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/en/articles" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"Super Homem", "content"=>"Superman (traduzido como Super-Homem[1]) é um personagem, cujas histórias em quadrinhos são publicadas pela editora estadunidense DC Comics, uma empresa subsidiária do grupo Time Warner. Superman, entretanto, já foi adaptado para diversos outros meios, como cinema, rádio, televisão, literatura e Video game. Superman é um super-herói criado pela dupla de autores de quadrinhos Joe Shuster e Jerry Siegel. Sua primeira aparição foi apresentada na revista Action Comics #1 em 1938, nos Estados Unidos.", "tag_list"=>"Super Herói, comic"}, "button"=>"", "locale"=>"en"}
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Super Herói' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `tags` (`created_at`, `name`, `updated_at`) VALUES ('2013-02-28 13:47:43', 'Super Herói', '2013-02-28 13:47:43')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `articles` (`content`, `created_at`, `nome`, `updated_at`) VALUES ('Superman (traduzido como Super-Homem[1]) é um personagem, cujas histórias em quadrinhos são publicadas pela editora estadunidense DC Comics, uma empresa subsidiária do grupo Time Warner. Superman, entretanto, já foi adaptado para diversos outros meios, como cinema, rádio, televisão, literatura e Video game. Superman é um super-herói criado pela dupla de autores de quadrinhos Joe Shuster e Jerry Siegel. Sua primeira aparição foi apresentada na revista Action Comics #1 em 1938, nos Estados Unidos.', '2013-02-28 13:47:43', 'Super Homem', '2013-02-28 13:47:43')[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2 AND `article_translations`.`locale` = 'en' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `article_translations` (`article_id`, `content`, `created_at`, `locale`, `nome`, `updated_at`) VALUES (2, 'Superman (traduzido como Super-Homem[1]) é um personagem, cujas histórias em quadrinhos são publicadas pela editora estadunidense DC Comics, uma empresa subsidiária do grupo Time Warner. Superman, entretanto, já foi adaptado para diversos outros meios, como cinema, rádio, televisão, literatura e Video game. Superman é um super-herói criado pela dupla de autores de quadrinhos Joe Shuster e Jerry Siegel. Sua primeira aparição foi apresentada na revista Action Comics #1 em 1938, nos Estados Unidos.', '2013-02-28 13:47:43', 'en', 'Super Homem', '2013-02-28 13:47:43')[0m
+  [1m[35mArticle::Translation Load (0.3ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `taggings` (`article_id`, `created_at`, `tag_id`, `updated_at`) VALUES (2, '2013-02-28 13:47:43', 3, '2013-02-28 13:47:43')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `taggings` (`article_id`, `created_at`, `tag_id`, `updated_at`) VALUES (2, '2013-02-28 13:47:43', 2, '2013-02-28 13:47:43')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/en/articles/2
+Completed 302 Found in 43ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/en/articles/2" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"2"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  Rendered articles/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Served asset /application.css - 304 Not Modified (53ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:43 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (26.3ms)
+Completed 200 OK in 44ms (Views: 35.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:45 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:47:50 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (2.2ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.6ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (30.7ms)
+Completed 200 OK in 46ms (Views: 38.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:51 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:51 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:51 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:51 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:51 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:51 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:47:51 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:47:51 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles/2/edit" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"locale"=>"pt", "id"=>"2"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/_form.html.haml (32.4ms)
+  Rendered articles/edit.html.haml within layouts/application (35.8ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:02 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/pt/articles/2" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"", "content"=>"", "tag_list"=>"comic, Super Heroi"}, "button"=>"", "locale"=>"pt", "id"=>"2"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mArticle::Translation Load (4.0ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Super Heroi' LIMIT 1[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  [1m[36m (0.4ms)[0m  [1mUPDATE `articles` SET `nome` = '', `content` = '', `updated_at` = '2013-02-28 13:48:15' WHERE `articles`.`id` = 2[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `article_translations` (`article_id`, `content`, `created_at`, `locale`, `nome`, `updated_at`) VALUES (2, NULL, '2013-02-28 13:48:15', 'pt', NULL, '2013-02-28 13:48:15')
+  [1m[36mArticle::Translation Load (0.4ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2 AND `article_translations`.`locale` = 'pt' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE `article_translations` SET `nome` = '', `content` = '', `updated_at` = '2013-02-28 13:48:15' WHERE `article_translations`.`id` = 4
+  [1m[36mArticle::Translation Load (0.3ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 3 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.2ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 4 LIMIT 1
+  [1m[36m (24.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/pt/articles/2
+Completed 302 Found in 58ms (ActiveRecord: 32.8ms)
+
+
+Started GET "/pt/articles/2" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"pt", "id"=>"2"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  Rendered articles/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:15 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (9.9ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (33.0ms)
+Completed 200 OK in 47ms (Views: 32.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:17 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles/2/edit" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"locale"=>"pt", "id"=>"2"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/_form.html.haml (29.9ms)
+  Rendered articles/edit.html.haml within layouts/application (32.9ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Served asset /articles.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:48:25 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/pt/articles/2" for 127.0.0.1 at 2013-02-28 10:49:00 -0300
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"Super Man", "content"=>"Superman (translated as Superman [1]) is a character whose comics are published by U.S. publisher DC Comics, a subsidiary of Time Warner. Superman, however, has been adapted for many other media such as cinema, radio, television, literature and video game. Superman is a superhero created by comic duo authors Joe Shuster and Jerry Siegel. His first appearance was presented in the journal Action Comics # 1 in 1938, in the United States.", "tag_list"=>"comic, Super Heroi"}, "button"=>"", "locale"=>"pt", "id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mArticle::Translation Load (0.4ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Super Heroi' LIMIT 1[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  [1m[36m (0.6ms)[0m  [1mUPDATE `articles` SET `nome` = 'Super Man', `content` = 'Superman (translated as Superman [1]) is a character whose comics are published by U.S. publisher DC Comics, a subsidiary of Time Warner. Superman, however, has been adapted for many other media such as cinema, radio, television, literature and video game. Superman is a superhero created by comic duo authors Joe Shuster and Jerry Siegel. His first appearance was presented in the journal Action Comics # 1 in 1938, in the United States.', `updated_at` = '2013-02-28 13:49:00' WHERE `articles`.`id` = 2[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2 AND `article_translations`.`locale` = 'pt' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mUPDATE `article_translations` SET `nome` = 'Super Man', `content` = 'Superman (translated as Superman [1]) is a character whose comics are published by U.S. publisher DC Comics, a subsidiary of Time Warner. Superman, however, has been adapted for many other media such as cinema, radio, television, literature and video game. Superman is a superhero created by comic duo authors Joe Shuster and Jerry Siegel. His first appearance was presented in the journal Action Comics # 1 in 1938, in the United States.', `updated_at` = '2013-02-28 13:49:00' WHERE `article_translations`.`id` = 4[0m
+  [1m[35mArticle::Translation Load (0.3ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 3 LIMIT 1
+  [1m[36mArticle::Translation Load (0.2ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/pt/articles/2
+Completed 302 Found in 21ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/pt/articles/2" for 127.0.0.1 at 2013-02-28 10:49:00 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"pt", "id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  Rendered articles/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:01 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:01 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:01 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:01 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:01 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:01 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:01 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:01 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (1.0ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (26.7ms)
+Completed 200 OK in 44ms (Views: 37.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Served asset /articles.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:03 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles/2/edit" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"locale"=>"pt", "id"=>"2"}
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.6ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/_form.html.haml (33.3ms)
+  Rendered articles/edit.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:07 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started PUT "/pt/articles/2" for 127.0.0.1 at 2013-02-28 10:49:15 -0300
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"Super Man", "content"=>"Superman (translated as Superman [1]) is a character whose comics are published by U.S. publisher DC Comics, a subsidiary of Time Warner. Superman, however, has been adapted for many other media such as cinema, radio, television, literature and video game. Superman is a superhero created by comic duo authors Joe Shuster and Jerry Siegel. His first appearance was presented in the journal Action Comics # 1 in 1938, in the United States.", "tag_list"=>"comic, Super Hero"}, "button"=>"", "locale"=>"pt", "id"=>"2"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle::Translation Load (0.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Super Hero' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `tags` (`created_at`, `name`, `updated_at`) VALUES ('2013-02-28 13:49:15', 'Super Hero', '2013-02-28 13:49:15')[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `taggings` WHERE `taggings`.`article_id` = 2 AND `taggings`.`tag_id` = 3[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `taggings` (`article_id`, `created_at`, `tag_id`, `updated_at`) VALUES (2, '2013-02-28 13:49:15', 4, '2013-02-28 13:49:15')
+  [1m[36m (0.5ms)[0m  [1mUPDATE `articles` SET `nome` = 'Super Man', `content` = 'Superman (translated as Superman [1]) is a character whose comics are published by U.S. publisher DC Comics, a subsidiary of Time Warner. Superman, however, has been adapted for many other media such as cinema, radio, television, literature and video game. Superman is a superhero created by comic duo authors Joe Shuster and Jerry Siegel. His first appearance was presented in the journal Action Comics # 1 in 1938, in the United States.', `updated_at` = '2013-02-28 13:49:15' WHERE `articles`.`id` = 2[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2 AND `article_translations`.`locale` = 'pt' LIMIT 1
+  [1m[36mArticle::Translation Load (0.3ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 3 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.2ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 4 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/pt/articles/2
+Completed 302 Found in 44ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/pt/articles/2" for 127.0.0.1 at 2013-02-28 10:49:15 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"pt", "id"=>"2"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36mArticle::Translation Load (0.4ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  Rendered articles/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:16 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:16 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:16 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:16 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:16 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:16 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:16 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:16 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (1.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (3.3ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (6.8ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (33.6ms)
+Completed 200 OK in 46ms (Views: 31.0ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Served asset /articles.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:18 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tags/Super%20Hero?locale=pt" for 127.0.0.1 at 2013-02-28 10:49:22 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt", "tag"=>"Super Hero"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (1.2ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (36.0ms)
+Completed 200 OK in 49ms (Views: 43.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:22 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:23 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:23 -0300
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:23 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:23 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:23 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:23 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:23 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tags/Super%20Hero?locale=en" for 127.0.0.1 at 2013-02-28 10:49:32 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en", "tag"=>"Super Hero"}
+  [1m[35mArticle Load (3.0ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (4.7ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (3.3ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (31.7ms)
+Completed 200 OK in 53ms (Views: 37.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:33 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:33 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:33 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:33 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:33 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:33 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:33 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tags/Super%20Hero?locale=pt" for 127.0.0.1 at 2013-02-28 10:49:45 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt", "tag"=>"Super Hero"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.6ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (26.8ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:45 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:45 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:45 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:45 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:45 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:45 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:45 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:46 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/tags/Super%20Hero?locale=en" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en", "tag"=>"Super Hero"}
+  [1m[35mArticle Load (3.1ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (28.8ms)
+Completed 200 OK in 44ms (Views: 36.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:52 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles/2/edit" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"2"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/_form.html.haml (18.0ms)
+  Rendered articles/edit.html.haml within layouts/application (20.6ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:49:56 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/en/articles/2" for 127.0.0.1 at 2013-02-28 10:50:08 -0300
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"Super Man", "content"=>"Superman (translated as Superman [1]) is a character whose comics are published by U.S. publisher DC Comics, a subsidiary of Time Warner. Superman, however, has been adapted for many other media such as cinema, radio, television, literature and video game. Superman is a superhero created by comic duo authors Joe Shuster and Jerry Siegel. His first appearance was presented in the journal Action Comics # 1 in 1938, in the United States.", "tag_list"=>"comic, Super Hero"}, "button"=>"", "locale"=>"en", "id"=>"2"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (3.4ms)[0m  BEGIN
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Super Hero' LIMIT 1[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  [1m[36m (0.7ms)[0m  [1mUPDATE `articles` SET `nome` = 'Super Man', `content` = 'Superman (translated as Superman [1]) is a character whose comics are published by U.S. publisher DC Comics, a subsidiary of Time Warner. Superman, however, has been adapted for many other media such as cinema, radio, television, literature and video game. Superman is a superhero created by comic duo authors Joe Shuster and Jerry Siegel. His first appearance was presented in the journal Action Comics # 1 in 1938, in the United States.', `updated_at` = '2013-02-28 13:50:08' WHERE `articles`.`id` = 2[0m
+  [1m[35mArticle::Translation Load (2.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2 AND `article_translations`.`locale` = 'en' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE `article_translations` SET `nome` = 'Super Man', `content` = 'Superman (translated as Superman [1]) is a character whose comics are published by U.S. publisher DC Comics, a subsidiary of Time Warner. Superman, however, has been adapted for many other media such as cinema, radio, television, literature and video game. Superman is a superhero created by comic duo authors Joe Shuster and Jerry Siegel. His first appearance was presented in the journal Action Comics # 1 in 1938, in the United States.', `updated_at` = '2013-02-28 13:50:08' WHERE `article_translations`.`id` = 3[0m
+  [1m[35mArticle::Translation Load (1.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 3 LIMIT 1
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 4 LIMIT 1[0m
+  [1m[35m (31.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/en/articles/2
+Completed 302 Found in 73ms (ActiveRecord: 42.6ms)
+
+
+Started GET "/en/articles/2" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  Rendered articles/show.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:09 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (1.8ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mArticle::Translation Load (0.6ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.7ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (33.1ms)
+Completed 200 OK in 46ms (Views: 39.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:12 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:50:30 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mTag Load (0.6ms)[0m  SELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1
+  [1m[36mArticle::Translation Load (0.6ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2
+  Rendered articles/index.html.haml within layouts/application (28.3ms)
+Completed 200 OK in 45ms (Views: 36.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:30 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:30 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:30 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:30 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:30 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:30 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:30 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:31 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/pt/articles/2/edit" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"locale"=>"pt", "id"=>"2"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.9ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/_form.html.haml (30.4ms)
+  Rendered articles/edit.html.haml within layouts/application (33.3ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:33 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/pt/articles/2" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWnoIEHt9whQeqKq+eI9JHA7MnYh9ThAJhOuQBFGfe4=", "article"=>{"nome"=>"Super Homem", "content"=>"Superman (traduzido como Super-Homem[1]) é um personagem, cujas histórias em quadrinhos são publicadas pela editora estadunidense DC Comics, uma empresa subsidiária do grupo Time Warner. Superman, entretanto, já foi adaptado para diversos outros meios, como cinema, rádio, televisão, literatura e Video game. Superman é um super-herói criado pela dupla de autores de quadrinhos Joe Shuster e Jerry Siegel. Sua primeira aparição foi apresentada na revista Action Comics #1 em 1938, nos Estados Unidos.", "tag_list"=>"comic, Super Herói"}, "button"=>"", "locale"=>"pt", "id"=>"2"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'comic' LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT `tags`.* FROM `tags` WHERE `tags`.`name` = 'Super Herói' LIMIT 1
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `taggings` WHERE `taggings`.`article_id` = 2 AND `taggings`.`tag_id` = 4
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `taggings` (`article_id`, `created_at`, `tag_id`, `updated_at`) VALUES (2, '2013-02-28 13:50:55', 3, '2013-02-28 13:50:55')[0m
+  [1m[35m (0.3ms)[0m  UPDATE `articles` SET `nome` = 'Super Homem', `content` = 'Superman (traduzido como Super-Homem[1]) é um personagem, cujas histórias em quadrinhos são publicadas pela editora estadunidense DC Comics, uma empresa subsidiária do grupo Time Warner. Superman, entretanto, já foi adaptado para diversos outros meios, como cinema, rádio, televisão, literatura e Video game. Superman é um super-herói criado pela dupla de autores de quadrinhos Joe Shuster e Jerry Siegel. Sua primeira aparição foi apresentada na revista Action Comics #1 em 1938, nos Estados Unidos.', `updated_at` = '2013-02-28 13:50:55' WHERE `articles`.`id` = 2
+  [1m[36mArticle::Translation Load (0.5ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2 AND `article_translations`.`locale` = 'pt' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  UPDATE `article_translations` SET `nome` = 'Super Homem', `content` = 'Superman (traduzido como Super-Homem[1]) é um personagem, cujas histórias em quadrinhos são publicadas pela editora estadunidense DC Comics, uma empresa subsidiária do grupo Time Warner. Superman, entretanto, já foi adaptado para diversos outros meios, como cinema, rádio, televisão, literatura e Video game. Superman é um super-herói criado pela dupla de autores de quadrinhos Joe Shuster e Jerry Siegel. Sua primeira aparição foi apresentada na revista Action Comics #1 em 1938, nos Estados Unidos.', `updated_at` = '2013-02-28 13:50:55' WHERE `article_translations`.`id` = 4
+  [1m[36mArticle::Translation Load (0.4ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 3 LIMIT 1[0m
+  [1m[35mArticle::Translation Load (0.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`id` = 4 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/pt/articles/2
+Completed 302 Found in 26ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/pt/articles/2" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"locale"=>"pt", "id"=>"2"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1
+  [1m[36mArticle::Translation Load (0.4ms)[0m  [1mSELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2[0m
+  Rendered articles/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:55 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[35mArticle Load (5.6ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.7ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (32.7ms)
+Completed 200 OK in 50ms (Views: 40.5ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:50:57 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/en/articles" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (1.1ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (0.9ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (24.1ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:51:02 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:51:14 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (0.6ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (18.6ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.5ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (52.8ms)
+Completed 200 OK in 66ms (Views: 42.7ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:51:14 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:51:14 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:51:14 -0300
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:51:14 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:51:14 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:51:14 -0300
+Served asset /articles.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:51:14 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:51:15 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/pt/articles" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"locale"=>"pt"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+  [1m[36mTag Load (3.3ms)[0m  [1mSELECT tags.*, count(taggings.tag_id) as count FROM `tags` INNER JOIN `taggings` ON `taggings`.`tag_id` = `tags`.`id` GROUP BY taggings.tag_id[0m
+  [1m[35mArticle::Translation Load (1.0ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 1[0m
+  [1m[35mArticle::Translation Load (0.4ms)[0m  SELECT `article_translations`.* FROM `article_translations` WHERE `article_translations`.`article_id` = 2
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT `tags`.* FROM `tags` INNER JOIN `taggings` ON `tags`.`id` = `taggings`.`tag_id` WHERE `taggings`.`article_id` = 2[0m
+  Rendered articles/index.html.haml within layouts/application (82.1ms)
+Completed 200 OK in 95ms (Views: 87.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-28 10:53:09 -0300
+Served asset /application.js - 304 Not Modified (0ms)
