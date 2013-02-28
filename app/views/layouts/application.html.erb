@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	Language:
+	<%= link_to_unless_current "English", locale: "en" %> |
+<%= link_to_unless_current "Portuguese", locale: "pt" %>
 <%= yield %>
 
 </body>
